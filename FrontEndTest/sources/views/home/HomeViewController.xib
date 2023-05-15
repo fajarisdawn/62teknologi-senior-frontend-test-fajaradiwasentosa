@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Barlow-Regular.ttf">
+            <string>Barlow-Regular</string>
+        </array>
+        <array key="Barlow-SemiBold.ttf">
+            <string>Barlow-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="FrontEndTest" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelButtonLeading" destination="8ZD-t3-TtD" id="lx9-WR-WHj"/>
+                <outlet property="cancelButtonWidthConstraint" destination="z3y-Np-wGo" id="FEh-QR-YL2"/>
+                <outlet property="cancelSearchButton" destination="Rxz-Ox-fMB" id="sbY-GR-nR3"/>
+                <outlet property="searchTextField" destination="2d4-Yk-6Yz" id="RyX-qk-c0y"/>
+                <outlet property="tableView" destination="2UZ-2F-DJM" id="EYx-74-LQJ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2UZ-2F-DJM">
+                    <rect key="frame" x="0.0" y="102" width="414" height="760"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m0L-ZF-3T1">
+                    <rect key="frame" x="0.0" y="44" width="414" height="58"/>
+                    <subviews>
+                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="e.g. Burger, Pizza" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2d4-Yk-6Yz">
+                            <rect key="frame" x="16" y="12" width="382" height="34"/>
+                            <fontDescription key="fontDescription" name="Barlow-Regular" family="Barlow" pointSize="16"/>
+                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                        </textField>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rxz-Ox-fMB">
+                            <rect key="frame" x="398" y="12" width="0.0" height="34"/>
+                            <constraints>
+                                <constraint firstAttribute="width" id="z3y-Np-wGo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Barlow-SemiBold" family="Barlow" pointSize="16"/>
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Cancel"/>
+                            <connections>
+                                <action selector="cancelButtonAction:" destination="-1" eventType="touchUpInside" id="0ai-bC-UBW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.82745098039215681" green="0.13725490196078433" blue="0.13725490196078433" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Rxz-Ox-fMB" firstAttribute="leading" secondItem="2d4-Yk-6Yz" secondAttribute="trailing" id="8ZD-t3-TtD"/>
+                        <constraint firstAttribute="bottom" secondItem="2d4-Yk-6Yz" secondAttribute="bottom" constant="12" id="Msi-KN-T8U"/>
+                        <constraint firstItem="2d4-Yk-6Yz" firstAttribute="top" secondItem="m0L-ZF-3T1" secondAttribute="top" constant="12" id="PpF-Wf-hTX"/>
+                        <constraint firstAttribute="height" constant="58" id="ROv-XU-ZA8"/>
+                        <constraint firstAttribute="trailing" secondItem="Rxz-Ox-fMB" secondAttribute="trailing" constant="16" id="Vgi-az-b4Z"/>
+                        <constraint firstItem="2d4-Yk-6Yz" firstAttribute="leading" secondItem="m0L-ZF-3T1" secondAttribute="leading" constant="16" id="f9K-vK-R7i"/>
+                        <constraint firstAttribute="bottom" secondItem="Rxz-Ox-fMB" secondAttribute="bottom" constant="12" id="oe7-kD-U26"/>
+                        <constraint firstItem="Rxz-Ox-fMB" firstAttribute="top" secondItem="m0L-ZF-3T1" secondAttribute="top" constant="12" id="uKc-fE-PBY"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="m0L-ZF-3T1" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3BH-hp-VfA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="m0L-ZF-3T1" secondAttribute="trailing" id="56o-CJ-2Kp"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="2UZ-2F-DJM" secondAttribute="bottom" id="CWy-ZB-MBG"/>
+                <constraint firstItem="m0L-ZF-3T1" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Jif-kD-BRd"/>
+                <constraint firstItem="2UZ-2F-DJM" firstAttribute="top" secondItem="m0L-ZF-3T1" secondAttribute="bottom" id="LoD-MZ-LRp"/>
+                <constraint firstItem="2UZ-2F-DJM" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="MKN-h4-UuX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2UZ-2F-DJM" secondAttribute="trailing" id="Vvt-bo-4LR"/>
+            </constraints>
+            <point key="canvasLocation" x="57.209302325581397" y="20.600858369098713"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
